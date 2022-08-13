@@ -1,0 +1,44 @@
+{
+    "name": "image-processing-api",
+    "version": "1.0.0",
+    "description": "First Project of advanced web development using node with Udacity Nanodegree (Egypt FWD)",
+    "main": "index.ts",
+    "scripts": {
+        "lint": "eslint . --ext .ts",
+        "prettier": "prettier --config .prettierrc 'src' --write",
+        "build": "npx tsc",
+        "start": "nodemon src/index.ts",
+        "jasmine": "jasmine",
+        "test": "npm run build && npm run jasmine"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Abdallahhany/Image-Processing-API.git"
+    },
+    "author": "Rashed",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Abdallahhany/Image-Processing-API/issues"
+    },
+    "homepage": "https://github.com/Abdallahhany/Image-Processing-API#readme",
+    "dependencies": {
+        "express": "^4.18.1",
+        "jasmine": "^4.3.0",
+        "jasmine-spec-reporter": "^7.0.0",
+        "nodemon": "^2.0.19",
+        "supertest": "^6.2.4"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/jasmine": "^4.0.3",
+        "@types/node": "^18.7.3",
+        "@typescript-eslint/eslint-plugin": "^5.33.0",
+        "@typescript-eslint/parser": "^5.33.0",
+        "eslint": "^8.21.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.7.4"
+    }
+}
