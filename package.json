@@ -2,7 +2,7 @@
     "name": "image-processing-api",
     "version": "1.0.0",
     "description": "First Project of advanced web development using node with Udacity Nanodegree (Egypt FWD)",
-    "main": "index.ts",
+    "main": "src/index.ts",
     "scripts": {
         "lint": "eslint . --ext .ts",
         "prettier": "prettier --config .prettierrc 'src' --write",
