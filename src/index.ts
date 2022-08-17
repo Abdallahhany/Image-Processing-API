@@ -9,7 +9,7 @@ app.use('/assets', express.static(path.join(__dirname, '../assets')));
 app.use('/api', imageRouter);
 
 app.get('/', (req: Request, res: Response): void => {
-    res.send('Initialization Version of Image Processing API Project');
+    res.send('Welcome To Image Processing API Project');
 });
 
 app.listen(port, (): void => {
