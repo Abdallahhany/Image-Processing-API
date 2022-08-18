@@ -30,7 +30,7 @@ const images = async (req: Request, res: Response): Promise<void> => {
 
     if (!ifFullImageExist) {
         res.status(404).send(
-            ' Image Not Found Make sure that you write the name correctly'
+            'Image Not Found Make sure that you write the name correctly'
         );
         return;
     }

@@ -19,7 +19,7 @@ const allImages = async (req: Request, res: Response): Promise<void> => {
                     <img src="../assets/thumb/${thumb}" alt="image not found"/>`;
         });
     });
-    res.send(data);
+    res.status(200).send(data);
 };
 
 export default allImages;
