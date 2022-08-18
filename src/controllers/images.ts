@@ -60,10 +60,9 @@ const images = async (req: Request, res: Response): Promise<void> => {
         })
         .catch((e) => {
             console.log(e);
-
             return res
                 .status(500)
-                .send('An error has occured while proccessing the image');
+                .send('An error has occurred while processing the image');
         });
 };
 
