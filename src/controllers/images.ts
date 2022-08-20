@@ -12,17 +12,23 @@ const images = async (req: Request, res: Response): Promise<void> => {
         ? parseInt(req.query['width'] as string)
         : null;
 
-    // check that nothing is missing in the query
-    if (!imageName || !width || !height) {
+    // Make sure that image name is correct
+    if (!imageName) {
         res.status(400).send(
-            'Please make sure that url contain image name and required width and height'
+            'Please make sure that You Provide the correct Name for the required image'
         );
         return;
     }
-
+    // make sure that image height and width are numbers and greater than zero
+    if (!width || !height || width <= 0 || height <= 0) {
+        res.status(400).send(
+            'Please make sure that You Provide the correct width and height for the image'
+        );
+        return;
+    }
     const fullImagePath = path.resolve(
         __dirname,
-        `../../../assets/full/${imageName}.jpg`
+        `../../assets/full/${imageName}.jpg`
     );
 
     // check the existence of the full image
@@ -37,7 +43,7 @@ const images = async (req: Request, res: Response): Promise<void> => {
 
     const thumbedImagePath = path.resolve(
         __dirname,
-        `../../../assets/thumb/${imageName}_${height}_${width}.jpg`
+        `../../assets/thumb/${imageName}_${height}_${width}.jpg`
     );
 
     // check the existence of thumbed image
